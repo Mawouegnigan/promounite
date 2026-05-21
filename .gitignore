@@ -39,3 +39,4 @@ PHPMailer/
 
 # Config sensible
 config/db.php
+config/env.php
