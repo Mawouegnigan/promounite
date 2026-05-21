@@ -1,0 +1,43 @@
+/* footer.css - style pro */
+
+.main-footer {
+    background-color: #006666;
+    color: #fff;
+    text-align: center;
+    padding: 1.2rem 0;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+}
+
+.main-footer p {
+    margin: 0;
+}
+
+.main-footer a {
+    color: #00cccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.main-footer a:hover {
+    color: #ffffff;
+}
+
+.main-footer {
+    width: 100%;
+    margin: 0;
+    padding: 15px 0;
+    display: block;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-footer {
+    width: 100%;
+    display: block;
+    background: #0D47A1;
+    color: white;
+}

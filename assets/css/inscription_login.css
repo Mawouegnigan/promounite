@@ -1,0 +1,242 @@
+  /* ===== BASE LOGIN (COMMUNE À TOUTES LES PAGES AUTH) ===== */
+
+body.login-page {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    margin:0;
+    font-family:Arial, sans-serif;
+
+    background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
+    url('/assets/images/barniere_connexion.png') no-repeat center center;
+    background-size:cover;
+}
+
+/* Carte principale */
+.login-container {
+    background:#008080;
+    padding:1.5rem;
+    border-radius:8px;
+    width:350px;
+    box-shadow:0 0 12px rgba(0,0,0,0.15);
+}
+
+/* Titres */
+h2 {
+    text-align:center;
+    color:#fff;
+    margin-bottom:0.8rem;
+    font-size:1.2rem;
+}
+
+/* Inputs */
+input {
+    width:100%;
+    padding:0.45rem;
+    margin:0.3rem 0;
+    border:1px solid #ccc;
+    border-radius:4px;
+    font-size:0.85rem;
+}
+
+input[readonly] {
+    background:#e9ecef;
+}
+
+/* Boutons */
+button {
+    width:100%;
+    padding:0.5rem;
+    margin-top:0.6rem;
+    background:#ff9800;
+    color:#fff;
+    border:none;
+    border-radius:4px;
+    cursor:pointer;
+    font-weight:bold;
+    font-size:0.9rem;
+}
+
+button:hover {
+    background:#fb8c00;
+}
+
+/* Messages */
+.error, .success, .message {
+    padding:0.4rem;
+    margin-bottom:0.6rem;
+    text-align:center;
+    border-radius:4px;
+    font-size:0.8rem;
+}
+
+.error { background:#ffcdd2; }
+.success { background:#c8e6c9; color:#2e7d32; }
+.message { background:#e3f2fd; color:#0d47a1; }
+
+/* Liens */
+.login-links {
+    display:flex;
+    justify-content:space-between;
+    margin-top:0.6rem;
+    font-size:0.75rem;
+}
+
+.login-links a {
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.login-links a:hover {
+    text-decoration:underline;
+}
+
+.link-left { color: orange; }
+.link-right { color: turquoise; }
+
+/* ===== PAGE IDENTIFIANT (SPÉCIFIQUE) ===== */
+
+.request-card {
+    background:#008080;
+    padding:1.5rem;
+    border-radius:8px;
+    box-shadow:0 0 12px rgba(0,0,0,0.15);
+    width:350px;
+    text-align:center;
+}
+
+.request-card h3 {
+    color:#fff;
+    margin-bottom:0.6rem;
+    font-size:1.2rem;
+}
+
+.info-text {
+    text-align:justify;
+    text-align-last:center;
+    color:#e0f2f1;
+    font-size:0.85rem;
+    margin-bottom:1.2rem;
+}
+
+.request-button {
+    display:block;
+    width:100%;
+    padding:0.5rem;
+    background:#ff9800;
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:4px;
+    font-size:0.9rem;
+}
+
+.request-button:hover {
+    background:#fb8c00;
+}
+
+.bottom-links {
+    display:flex;
+    justify-content:space-between;
+    margin-top:0.6rem;
+    font-size:0.75rem;
+}
+
+.bottom-links a {
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.bottom-links a:hover {
+    text-decoration:underline;
+}
+
+/* ===== MOT DE PASSE OUBLIE  (SPÉCIFIQUE) ===== */
+
+
+.forgot-password {
+    
+    text-align-last:center;
+    font-weight:bold;
+    margin-top:-5px;
+    margin-bottom:8px;
+}
+
+.forgot-password a {
+    font-size:0.75rem;
+    color:#90EE90ff;
+    text-decoration:none;
+}
+
+.forgot-password a:hover {
+    text-decoration:underline;
+}
+.profile-page {
+    background: #f7f9fc;
+}
+
+.container {
+    max-width: 500px;
+    margin: 3rem auto;
+    padding: 1rem;
+}
+
+.profile-card {
+    background: #f0f4ff;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #0D47A1;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.profile-card h3 {
+    text-align: center;
+    color: #0D47A1;
+    margin-bottom: 1.5rem;
+}
+
+.profile-card input {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.profile-card input[readonly] {
+    background-color: #e3eafc;
+}
+
+.profile-card button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #0D47A1;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.profile-card button:hover {
+    background-color: #0b3b8c;
+}
+
+.error {
+    background: #ffcdd2;
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.message {
+    background: #e3f2fd;
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-radius: 6px;
+}

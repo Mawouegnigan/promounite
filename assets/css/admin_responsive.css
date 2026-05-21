@@ -1,0 +1,176 @@
+/* ================================================= */
+/* ===== ADMIN RESPONSIVE CLEAN (STABLE SIMPLE) ===== */
+/* ================================================= */
+
+/* ========================= */
+/* TABLETTE (≤1024px) */
+/* ========================= */
+@media (max-width: 1024px) {
+
+    /* ===== CARDS ===== */
+    .admin-page .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ===== TABLE SCROLL ===== */
+    .admin-page .documents-table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .admin-page table {
+        width: 100%;
+        min-width: 900px;
+        border-collapse: collapse;
+    }
+
+    .admin-page th,
+    .admin-page td {
+        font-size: 0.85rem;
+        padding: 8px;
+        white-space: nowrap;
+    }
+
+    .admin-page table img {
+        max-width: 60px;
+        height: auto;
+    }
+}
+
+/* ========================= */
+/* MOBILE (≤768px) */
+/* ========================= */
+@media (max-width: 768px) {
+
+    /* ===== CONTAINER ===== */
+    .admin-page .container {
+        padding: 12px;
+    }
+
+    /* ===== CARDS ===== */
+    .admin-page .cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .admin-page .card {
+        padding: 15px 12px;
+        border-radius: 14px;
+        text-align: center;
+        min-height: 120px;
+    }
+
+    .admin-page .card i {
+        font-size: 1.6rem;
+        margin-bottom: 8px;
+    }
+
+    .admin-page .card h4 {
+        font-size: 0.9rem;
+    }
+
+    .admin-page .card a {
+        font-size: 0.8rem;
+        padding: 8px 10px;
+        border-radius: 8px;
+    }
+
+    /* ========================= */
+    /* FORMULAIRES (SIMPLE & STABLE) */
+    /* ========================= */
+
+    .admin-page form,
+    .admin-page .card-form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        max-width: 100%;
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    .admin-page input,
+    .admin-page select,
+    .admin-page textarea,
+    .admin-page button {
+        width: 100%;
+        padding: 0.7rem;
+        font-size: 0.9rem;
+        box-sizing: border-box;
+    }
+
+    .admin-page textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    /* ========================= */
+    /* TABLES MOBILE */
+    /* ========================= */
+
+    .admin-page .documents-table-wrapper {
+        overflow-x: auto;
+    }
+
+    .admin-page table {
+        width: 100%;
+        min-width: 800px;
+    }
+
+    .admin-page th,
+    .admin-page td {
+        font-size: 0.85rem;
+        padding: 8px;
+        white-space: nowrap;
+    }
+
+    .admin-page table img {
+        max-width: 50px;
+        height: auto;
+    }
+
+    /* ========================= */
+    /* TITRES MOBILE */
+    /* ========================= */
+
+    .admin-page h2 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .admin-page h3 {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+
+.admin-page .container {
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+.table-scroll {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Empêche le tableau de casser */
+.documents-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px; /* force scroll sur mobile */
+}
+
+/* Optionnel: améliore lisibilité mobile */
+@media (max-width: 768px) {
+
+    .documents-table th,
+    .documents-table td {
+        white-space: nowrap;
+        font-size: 13px;
+        padding: 8px;
+    }
+}

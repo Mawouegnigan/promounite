@@ -1,0 +1,198 @@
+/* ================================================= */
+/* ===== Responsive Global (CLEAN VERSION) ===== */
+/* ================================================= */
+
+/* ================================================= */
+/* ===== TABLETTE ===== */
+/* ================================================= */
+
+@media (max-width: 1024px) {
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ================================================= */
+/* ===== MOBILE ===== */
+/* ================================================= */
+
+@media (max-width: 768px) {
+
+    /* ===== CONTAINER ===== */
+    .container {
+        padding: 10px;
+    }
+
+    /* ===== CARDS ===== */
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* ===== FORMULAIRES ===== */
+    .form-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-row select {
+        width: 100%;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    /* ===== TABLES SIMPLE (fallback global) ===== */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* ===== DOCUMENTS TABLE (IMPORTANT FIX) ===== */
+    .documents-table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .documents-table,
+    .actualites-table {
+        min-width: 700px;
+    }
+
+    .documents-table img,
+    .actualites-table img {
+        max-width: 80px;
+    }
+
+    #file-preview {
+        max-width: 80px;
+        height: auto;
+    }
+
+    /* ===== AVIS ===== */
+    .avis-card {
+        padding: 12px;
+    }
+
+    .avis-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .avis-date {
+        font-size: 0.75rem;
+    }
+
+    /* ===== TABLE AVIS ===== */
+    .table-avis,
+    .table-avis thead,
+    .table-avis tbody,
+    .table-avis th,
+    .table-avis td,
+    .table-avis tr {
+        display: block;
+        width: 100%;
+    }
+
+    .table-avis thead {
+        display: none;
+    }
+
+    .table-avis tr {
+        margin-bottom: 1rem;
+        background: #fff;
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    .table-avis td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px;
+        border: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    .table-avis td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        flex-basis: 40%;
+    }
+
+    .table-avis td:last-child {
+        border-bottom: none;
+    }
+
+    /* ===== STATS ===== */
+    .stats-box {
+        grid-template-columns: 1fr;
+    }
+
+    /* ===== COURS / UI ===== */
+    .main-content {
+        flex-direction: column;
+    }
+
+    .cours-cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .cours-card {
+        padding: 12px;
+        gap: 8px;
+    }
+
+    .doc-actions {
+        flex-direction: column;
+    }
+
+    .btn-view,
+    .btn-download {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .page-title {
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        margin: 1.5rem auto;
+        padding: 1rem;
+    }
+
+    .profile-card {
+        padding: 1.5rem;
+    }
+
+    .profile-card input,
+    .profile-card button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .floating-back {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        bottom: 15px;
+        left: 15px;
+    }
+}
+@media (max-width: 768px) {
+    .table-avis {
+        min-width: 700px;
+    }
+}

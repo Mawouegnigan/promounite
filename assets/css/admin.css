@@ -1,0 +1,364 @@
+/* ================================================= */
+/* ===== ADMIN GLOBAL BASE (HORS DASHBOARD) ===== */
+/* ================================================= */
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f7f9fc;
+    margin:0;
+}
+
+/* container global admin */
+.admin-page .container,
+.container{
+    max-width:1100px;
+    margin:2rem auto;
+    padding:1rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* ================================================= */
+/* ===== DASHBOARD (ISOLÉ) ===== */
+/* ================================================= */
+
+.dashboard .cards {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+}
+
+.dashboard .card {
+    background: #fff;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    text-align: center;
+    transition: 0.3s;
+    position: relative;
+}
+
+.dashboard .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+}
+
+.dashboard .card i {
+    font-size: 2rem;
+    color: #1976D2;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard .card h4 {
+    color:#0D47A1;
+}
+
+.dashboard .card a {
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    background:#1976D2;
+    color:#fff;
+    border-radius:8px;
+    text-decoration:none;
+}
+
+.dashboard .card .badge {
+    position:absolute;
+    top:10px;
+    right:15px;
+    background:#F57C00;
+    color:#fff;
+    padding:4px 8px;
+    border-radius:12px;
+    font-size:0.75rem;
+}
+
+/* ================================================= */
+/* ===== FORMULAIRES ===== */
+/* ================================================= */
+
+form,
+.card-form,
+.actualite-form {
+    background:#f0f4ff;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 3px 8px rgba(0,0,0,0.05);
+    margin-bottom:2rem;
+    display:flex;
+    flex-direction:column;
+}
+
+/* inputs */
+form input,
+form select,
+form textarea,
+form button,
+.card-form input,
+.card-form select,
+.card-form textarea,
+.card-form button {
+    width:100%;
+    padding:0.75rem;
+    margin-bottom:1rem;
+    border-radius:6px;
+    border:1px solid #ccc;
+    box-sizing:border-box;
+}
+
+/* button */
+form button,
+.card-form button {
+    background:#0D47A1;
+    color:#fff;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* ================================================= */
+/* ===== TABLES ===== */
+/* ================================================= */
+
+.documents-table,
+.actualites-table,
+table {
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    margin-top:1rem;
+}
+
+/* header + cells */
+.documents-table th,
+.documents-table td,
+table th,
+table td {
+    border:1px solid #0D47A1;
+    padding:0.6rem 0.8rem;
+}
+
+/* header style */
+.documents-table th,
+table th {
+    background:#cce0ff;
+}
+
+/* wrapper scroll IMPORTANT */
+.documents-table-wrapper {
+    width:100%;
+    overflow-x:auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* ================================================= */
+/* ===== TABLE FIX CRITIQUE (CORRECTION BUG MOBILE/TABLET) ===== */
+/* ================================================= */
+
+/* IMPORTANT : suppression du comportement cassant */
+table {
+    table-layout: auto; /* essentiel */
+}
+
+/* stop overflow texte forcé */
+th,
+td {
+    white-space: normal; /* IMPORTANT */
+    vertical-align: middle;
+}
+
+/* images contrôlées */
+table img {
+    max-width: 60px;
+    height: auto;
+    display: block;
+}
+
+/* actions colonne plus stable */
+td:last-child {
+    min-width: 120px;
+}
+
+/* ================================================= */
+/* ===== TITRES ===== */
+/* ================================================= */
+
+h2{
+    color:#0D47A1;
+    margin-bottom:1rem;
+    text-align:center;
+}
+
+h3{
+    color:#1976D2;
+    margin-top:2rem;
+    text-align:center;
+}
+
+/* ================================================= */
+/* ===== LIENS ===== */
+/* ================================================= */
+
+a{
+    color:#0D47A1;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* ================================================= */
+/* ===== AVIS ===== */
+/* ================================================= */
+
+.avis-card{
+    background:#fff;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+/* ================================================= */
+/* ===== UPLOAD FIX GLOBAL ===== */
+/* ================================================= */
+
+input[type="file"]{
+    width:100%;
+}
+
+/* ================================================= */
+/* ===== MOBILE / TABLET RESPONSIVE ===== */
+/* ================================================= */
+
+@media (max-width: 1024px){
+    .dashboard .cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px){
+
+    .container{
+        padding:12px;
+    }
+
+    /* dashboard mobile */
+    .dashboard .cards{
+        grid-template-columns: repeat(2, 1fr);
+        gap:12px;
+    }
+
+    .dashboard .card{
+        padding:15px;
+        border-radius:14px;
+    }
+
+    .dashboard .card i{
+        font-size:1.6rem;
+    }
+
+    /* forms */
+    form,
+    .card-form{
+        padding:15px;
+    }
+
+    input,
+    select,
+    textarea,
+    button{
+        width:100%;
+        font-size:0.9rem;
+    }
+
+    /* TABLE SCROLL PROPRE */
+    .documents-table-wrapper{
+        overflow-x:auto;
+    }
+
+    table{
+        min-width:650px; /* scroll horizontal propre */
+    }
+
+    /* images encore plus petites mobile */
+    table img{
+        max-width:50px;
+    }
+}
+
+/* ================================================= */
+/* ===== ADMIN OVERRIDE ===== */
+/* ================================================= */
+
+.admin-page form {
+    max-width: 700px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.admin-page .card-form {
+    max-width: 700px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+/* images table admin */
+.admin-page table img {
+    max-width: 80px;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* scroll propre admin */
+.admin-page .documents-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/* ================================================= */
+/* ===== FIX FINAL TABLE RESPONSIVE UNIVERSEL ===== */
+/* ================================================= */
+
+.admin-page .documents-table-wrapper,
+.admin-page .actualites-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* IMPORTANT : stop layout cassé */
+.admin-page table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+/* cellules propres */
+.admin-page th,
+.admin-page td {
+    white-space: normal;
+    vertical-align: middle;
+}
+
+/* images contrôlées */
+.admin-page table img {
+    max-width: 60px;
+    height: auto;
+    display: block;
+}
+
+/* sécurité scroll horizontal */
+@media (max-width: 1024px) {
+    .admin-page table {
+        min-width: 700px;
+    }
+}
+
+.table-avis-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}

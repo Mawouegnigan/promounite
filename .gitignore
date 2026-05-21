@@ -1,0 +1,41 @@
+# Logs
+*.log
+
+# Sauvegardes
+*.save
+*.bak
+*.tar.gz
+*.zip
+*.rar
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Uploads temporaires
+assets/uploads/documents/*
+assets/uploads/actualites/*
+
+# Exceptions si tu veux garder le dossier
+!assets/uploads/documents/.gitkeep
+!assets/uploads/actualites/.gitkeep
+
+# Sessions / cache
+tmp/
+cache/
+
+# Config sensible éventuelle
+config/db_local.php
+.env
+
+# Pages de test / debug
+test.php
+test_active.txt
+stats.php
+carriere.php
+
+# Librairie externe (optionnel mais recommandé si tu ne la modifies pas)
+PHPMailer/
+
+# Config sensible
+config/db.php
