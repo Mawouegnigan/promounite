@@ -46,7 +46,7 @@ if (!isset($_SESSION['id_user'])) {
     <p>
         Responsables :
         <ol>
-            <li>GBENAKPON STANISLAS AGBAHOUNGBATA — Coordination générale   (+229 01 96 48 46 48) </li>
+            <li>GBENAKPON STANISLAS AGBANGBATA — Coordination générale   (+229 01 96 48 46 48) </li>
             <li>BLECK STEEVEN KOCOUVISSO — Référent technique & conseil  (+229 01 61 03 37 90)</li>
             <li>MAWOUEGNIGAN GREGOIRE FANGNON — Développement & maintenance plateforme (+229 01 52 14 58 06 )</li>
         </ol>

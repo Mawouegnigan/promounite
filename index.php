@@ -200,10 +200,10 @@ $nb_views = $pdo->query("
 
     <!-- ===== STATS ===== -->
     <div class="stats-box">
-        <div class="stat-card">📄 Documents : <?= $nb_docs ?></div>
-        <div class="stat-card">⬇️ Téléchargements : <?= $nb_downloads ?></div>
+        <div class="stat-card">📄 Documents : 116+ </div>
+        <div class="stat-card">⬇️ Téléchargements : 163+ </div>
         <div class="stat-card">👥 Utilisateurs : <?= $nb_users ?></div>
-        <div class="stat-card">👁️ Consultations : <?= $nb_views ?></div>
+        <div class="stat-card">👁️ Consultations : 274+ </div>
     </div>
 
 </div>
