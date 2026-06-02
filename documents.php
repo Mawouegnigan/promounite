@@ -4,7 +4,6 @@ session_start();
 require_once __DIR__ . '/config/db.php';
 require_once __DIR__ . '/config/app.php';
 
-
 if(!isset($_SESSION['id_user'])){
     header("Location: login.php");
     exit;
@@ -94,7 +93,9 @@ $stmt = $pdo->prepare($sql);
 $stmt->execute($params);
 $docs = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <div class="container">
 
 <h2>
@@ -108,6 +109,18 @@ echo match($type){
 };
 ?>
 </h2>
+
+<!-- 🔍 RECHERCHE AJAX -->
+<div style="margin-bottom:20px;">
+    <input 
+        type="text" 
+        id="searchInput"
+        placeholder="🔍 Rechercher un document..."
+        style="padding:10px; width:300px;"
+    >
+</div>
+
+<div id="results">
 
 <?php if(empty($docs)): ?>
     <div class="empty-state">Aucun document</div>
@@ -159,6 +172,21 @@ echo match($type){
 
 <?php endif; ?>
 
+</div> <!-- end results -->
+
 </div>
 
 <?php include __DIR__ . '/templates/footer.php'; ?>
+
+<!-- 🚀 AJAX SEARCH -->
+<script>
+document.getElementById("searchInput").addEventListener("keyup", function() {
+    let query = this.value;
+
+    fetch("search_documents.php?q=" + query)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("results").innerHTML = data;
+        });
+});
+</script>
