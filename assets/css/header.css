@@ -10,18 +10,15 @@
     top: 0;
     z-index: 999;
 }
-
 .logo-container img {
     height: 50px;
     object-fit: contain;
 }
-
 .navbar {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
-
 .navbar a {
     color: #fff;
     text-decoration: none;
@@ -29,15 +26,12 @@
     border-radius: 4px;
     transition: all 0.3s;
 }
-
 .navbar a:hover {
     background-color: #00b3b3;
 }
-
 .dropdown {
     position: relative;
 }
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -49,30 +43,39 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     z-index: 1000;
 }
-
 .dropdown-content a {
     display: block;
     padding: 0.5rem 1rem;
     color: #fff;
 }
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
 .menu-toggle {
     display: none;
     font-size: 1.8rem;
     cursor: pointer;
 }
-
 .profile a {
     background-color: #00cccc;
     border-radius: 6px;
 }
-
 .profile a:hover {
     background-color: #009999;
+}
+
+/* LIENS UTILES — dropdown élargi pour les titres longs */
+.dropdown.liens-utiles .dropdown-content {
+    min-width: 280px;
+}
+.dropdown.liens-utiles .dropdown-content a {
+    white-space: normal;
+    line-height: 1.4;
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.dropdown.liens-utiles .dropdown-content a:last-child {
+    border-bottom: none;
 }
 
 /* RESPONSIVE */
@@ -96,4 +99,8 @@
         position: relative;
         box-shadow: none;
     }
+    .dropdown.liens-utiles .dropdown-content {
+        min-width: 100%;
+    }
 }
+

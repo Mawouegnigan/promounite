@@ -1,5 +1,4 @@
 /* footer.css - style pro */
-
 .main-footer {
     background-color: #006666;
     color: #fff;
@@ -9,21 +8,17 @@
     box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
     margin-top: 2rem;
 }
-
 .main-footer p {
     margin: 0;
 }
-
 .main-footer a {
     color: #00cccc;
     text-decoration: none;
     transition: color 0.3s;
 }
-
 .main-footer a:hover {
     color: #ffffff;
 }
-
 .main-footer {
     width: 100%;
     margin: 0;
@@ -34,10 +29,51 @@ body {
     margin: 0;
     padding: 0;
 }
-
 .main-footer {
     width: 100%;
     display: block;
     background: #0D47A1;
     color: white;
 }
+
+/* LIENS UTILES — section footer */
+.footer-links {
+    margin-bottom: 0.8rem;
+    padding: 0 1rem;
+}
+.footer-useful-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #00cccc;
+    margin-bottom: 0.4rem;
+}
+.footer-useful-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem 1.5rem;
+}
+.footer-useful-links li::before {
+    content: "→ ";
+    color: #00cccc;
+}
+.footer-useful-links a {
+    color: #fff;
+    font-size: 0.85rem;
+}
+.footer-useful-links a:hover {
+    color: #00cccc;
+}
+
+/* Séparateur visuel entre liens utiles et copyright */
+.footer-links + p {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 0.8rem;
+    margin-top: 0.4rem;
+}
+
