@@ -1,103 +1,44 @@
-# 📚 PromoUnité — Plateforme sécurisée de gestion documentaire
 
-PromoUnité est une application web développée en PHP/MySQL permettant la gestion et la consultation sécurisée de documents pédagogiques au sein d’un système d’accès restreint (type intranet éducatif).
+# PromoUnité — Gestion documentaire pour environnements éducatifs
 
-Elle est conçue pour centraliser les ressources pédagogiques (cours, TD, évaluations, normes) accessibles uniquement aux utilisateurs authentifiés.
-
----
-
-## 🔐 Type de projet
-
-Ce projet simule un système interne sécurisé utilisé dans des environnements éducatifs ou institutionnels.
-
-- Aucun accès public aux documents
-- Authentification obligatoire
-- Accès basé sur identifiants utilisateurs
-- Gestion centralisée des ressources pédagogiques
+PromoUnité est une application web que j'ai construite en PHP/MySQL pour répondre à un besoin concret : centraliser et sécuriser l'accès aux ressources pédagogiques au sein d'un intranet éducatif. Cours, TD, évaluations, normes — tout est regroupé en un seul endroit, accessible uniquement aux utilisateurs autorisés.
 
 ---
 
-## 🚀 Fonctionnalités principales
+## Le contexte
 
-### 👤 Authentification sécurisée
-- Connexion via identifiant et mot de passe
-- Gestion de session PHP
-- Protection des routes administratives
-
-### 📂 Gestion documentaire
-- Ajout de documents pédagogiques
-- Classification par type :
-  - Cours
-  - Travaux dirigés (TD)
-  - Évaluations
-  - Normes
-- Filtrage et organisation des contenus
-
-### 🛠️ Administration
-- Interface admin protégée
-- Gestion des utilisateurs (accès logique via identifiants)
-- Upload de fichiers
-- CRUD complet sur les documents
+Dans beaucoup d'établissements, les documents pédagogiques sont éparpillés : drives partagés, emails, clés USB... PromoUnité simule ce qu'un vrai système interne devrait être — une plateforme fermée, structurée, où chaque utilisateur accède à ce dont il a besoin après authentification, sans que rien ne soit exposé publiquement.
 
 ---
 
-## 🧱 Architecture du projet
+## Ce que fait l'application
 
+**Côté authentification**, chaque utilisateur se connecte avec ses identifiants personnels. Une fois connecté, il dispose d'une page dédiée pour mettre à jour son profil. Les sessions PHP assurent la continuité de la navigation, et les routes sensibles restent protégées contre tout accès non authentifié.
 
+**Côté documents**, l'application permet d'ajouter, classer et retrouver facilement des ressources selon leur type : cours, travaux dirigés, évaluations ou normes. Le filtrage facilite la navigation même quand le volume de contenus grossit.
 
-
----
-
-## 🛠️ Technologies utilisées
-
-- PHP (backend natif)
-- MySQL (base de données relationnelle)
-- HTML5 / CSS3
-- JavaScript (interactions UI)
-- PDO (requêtes sécurisées)
+**Côté administration**, une interface dédiée permet de gérer les utilisateurs, uploader des fichiers et effectuer toutes les opérations CRUD sur les documents. Elle est logiquement séparée du reste de l'application.
 
 ---
 
-## 🔐 Sécurité
+## Les choix techniques
 
-- Sessions PHP pour l’authentification
-- Accès restreint aux routes sensibles
-- Requêtes préparées (PDO)
-- Validation des uploads de fichiers
-- Séparation logique admin / API / configuration
+J'ai opté pour du **PHP natif** côté backend, couplé à **MySQL** via **PDO** pour des requêtes préparées — ce qui évite les injections SQL sans dépendre d'un ORM. Le frontend est en HTML5/CSS3/JavaScript, sans framework lourd, pour garder la stack simple et maîtrisée de bout en bout.
+
+Sur la sécurité, plusieurs couches sont en place : sessions PHP, validation des fichiers uploadés, séparation claire entre les espaces admin, API et configuration.
 
 ---
 
-## 🌐 Accès à la plateforme
+## Accès & démo
 
-La plateforme n’est pas publique.
+La plateforme n'est pas publique — les accès sont fournis aux utilisateurs autorisés uniquement.
 
-👉 Accès uniquement via identifiants fournis aux utilisateurs autorisés.
-
----
-
-## 💻 Démo
-
-👉 https://ton-domaine.com/promounite-demo
+- 🔗 Démo : (en cours)
+- 💻 Code source : [github.com/Mawouegnigan/promounite](https://github.com/Mawouegnigan/promounite)
 
 ---
 
-## 💻 Code source
+## Ce que ce projet m'a apporté
 
-👉 https://github.com/Mawouegnigan/promounite
+Au-delà du code, ce projet m'a permis de penser un système complet — de la gestion des droits d'accès à l'organisation des fichiers, en passant par la sécurisation des routes. C'est le genre de problématique qu'on retrouve dans des environnements institutionnels réels, et c'était justement l'objectif : simuler quelque chose de proche de la réalité.
 
----
-
-## 🎯 Objectifs du projet
-
-- Développer une plateforme sécurisée de gestion documentaire
-- Simuler un intranet éducatif réel
-- Mettre en place un système d’authentification fonctionnel
-- Gérer des fichiers et catégories de manière structurée
-
----
-
-## 👨‍💻 Auteur
-
-- Développeur : Ezechiel
-- Projet : Portfolio professionnel + application éducative
